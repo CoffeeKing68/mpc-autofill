@@ -4,6 +4,15 @@
 <head>
     <link rel="shortcut icon" href="{% static 'cardpicker/favicon.ico' %}"/>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ GTAG }}"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ GTAG }}');
+    </script>
+
     <title>{% block title %} MPC Autofill {% endblock %}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,9 +39,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
+                {% comment %} <li class="nav-item">
                     <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                </li>
+                </li> {% endcomment %}
                 <li class="nav-item">
                     <a class="nav-link" href="/guide">Guide</a>
                 </li>
@@ -47,9 +56,9 @@
                         Download
                     </a>
                 </li>
-                <li class="nav-item">
+                {% comment %} <li class="nav-item">
                     <a class="nav-link" href="https://github.com/ndepaola/mpc-autofill" target="_blank">GitHub</a>
-                </li>
+                </li> {% endcomment %}
                 <li class="nav-item">
                     <a class="nav-link" href="https://discord.gg/VRScmDMeSw" target="_blank">Join the Discord!</a>
                 </li>
