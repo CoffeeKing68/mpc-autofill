@@ -28,6 +28,11 @@ The following Python modules:
 * `tqdm`
 * `pyinstaller` for generating executables
 
+Run the following to install all packages
+```bash
+$ pip install -r requirements.txt
+```
+
 # Setup
 1. Clone this repo somewhere on your server
 2. In the same directory as the repo, create a folder called `staticroot` - by default, the database updater stores card images here
